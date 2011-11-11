@@ -1,5 +1,9 @@
 Scorekeeper::Application.routes.draw do
   get "welcome/index"
+  match '/profile',   :to => 'users#profile'
+  match '/home',      :to => 'welcome#index'
+  match '/signup',    :to => 'users#signup'
+  match '/login',     :to => 'users#login'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
