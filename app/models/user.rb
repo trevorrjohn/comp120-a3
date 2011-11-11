@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   attr_accessible :lname, :fname, :handle
+  has_many :games
+  has_many :scores
   validates :lname, :presence => true,
                     :length => { :maximum => 25 }
   validates :fname, :presence => true,
